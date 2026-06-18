@@ -9,7 +9,6 @@ phases:
       # - npm -v
       # - echo "Installing dependencies..."
       - npm ci --legacy-peer-deps
-
   build:
     commands:
       - echo "Building the React application..."
