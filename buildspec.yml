@@ -1,21 +1,25 @@
+
+
 version: 0.2
+
 phases:
-  install:
-    runtime-versions:
-      nodejs: 18
-    commands:
-      - echo "Checking node and npm versions..."
-      # - node -v
-      # - npm -v
-      # - echo "Installing dependencies..."
-      - npm ci --legacy-peer-deps
-  build:
-    commands:
-      - echo "Building the React application..."
-      - npm run build
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Checking node and npm versions..."
+      - node -v
+      - npm -v
+      - echo "Installing dependencies..."
+      - npm ci --legacy-peer-deps
+
+  build:
+    commands:
+      - echo "Building the React application..."
+      - npm run build
+
 artifacts:
-  files:
-    - '**/*'
-  # Use 'dist' if you use Vite, or 'build' if you use Create React App
-  base-directory: build
-  discard-paths: no
+  files:
+    - '**/*'
+  base-directory: build
+  discard-paths: no
